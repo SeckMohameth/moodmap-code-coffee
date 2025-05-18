@@ -80,6 +80,17 @@ const moods = [
 
 const db = getFirestore(firebaseApp);
 
+// Helper to slightly offset markers that share the same location
+function offsetCoords(lat: number, lng: number, index: number) {
+  // Offset by up to ~10 meters (0.0001 deg) per duplicate
+  const offset = 0.0001 * index;
+  // Alternate direction for each duplicate
+  return {
+    latitude: lat + offset * Math.cos((index * 2 * Math.PI) / 5),
+    longitude: lng + offset * Math.sin((index * 2 * Math.PI) / 5),
+  };
+}
+
 export default function MoodSelector() {
   const [selectedMood, setSelectedMood] = useState<any>(null);
   const [loading, setLoading] = useState(false);
