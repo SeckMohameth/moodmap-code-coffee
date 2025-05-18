@@ -22,7 +22,7 @@ export default function TabTwoScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore Moods</ThemedText>
+        <ThemedText type="title">Explore Moods Jordan here</ThemedText>
       </ThemedView>
       <ThemedText>
         This app includes example code to help you get started.
