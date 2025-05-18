@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const moods = [
@@ -87,4 +87,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
